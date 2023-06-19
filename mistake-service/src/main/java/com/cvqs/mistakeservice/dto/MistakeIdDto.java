@@ -1,4 +1,4 @@
 package com.cvqs.mistakeservice.dto;
 
-public class MistakeId {
+public class MistakeIdDto {
 }
