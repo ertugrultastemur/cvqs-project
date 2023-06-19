@@ -13,7 +13,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int userId;
+    private Integer userId;
 
     @Column(name = "eMail")
     private String eMail;
@@ -24,12 +24,15 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "isDeleted")
+    private Boolean isDeleted;
 
-    public int getUserId() {
+
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -57,12 +60,20 @@ public class User {
         this.password = password;
     }
 
+    public Boolean getDeleted() {
+        return isDeleted;
+    }
 
-    public User(int userId, String eMail, String userName, String password) {
+    public void setDeleted(Boolean deleted) {
+        isDeleted = deleted;
+    }
+
+    public User(Integer userId, String eMail, String userName, String password, Boolean isDeleted) {
         this.userId = userId;
         this.eMail = eMail;
         this.userName = userName;
         this.password = password;
+        this.isDeleted = isDeleted;
     }
 
     public User() {
