@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="terminal-service" />
         <module name="mistake-listing-service" />
         <module name="eureka-server" />
         <module name="user-management-service" />
@@ -27,6 +28,7 @@
       <module name="mistake-service" options="-parameters" />
       <module name="security" options="-parameters" />
       <module name="security-service" options="-parameters" />
+      <module name="terminal-service" options="-parameters" />
       <module name="user-management-service" options="-parameters" />
     </option>
   </component>
