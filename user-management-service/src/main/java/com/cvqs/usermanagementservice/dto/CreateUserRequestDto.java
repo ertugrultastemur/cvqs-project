@@ -1,8 +1,10 @@
 package com.cvqs.usermanagementservice.dto;
 
-public class CreateUserRequestDto {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-    private Integer userId;
+public class CreateUserRequestDto {
+    Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private String eMail;
 
@@ -10,56 +12,48 @@ public class CreateUserRequestDto {
 
     private String password;
 
-    private Boolean isDeleted;
 
-    public CreateUserRequestDto(Integer userId, String eMail, String userName, String password, Boolean isDeleted) {
-        this.userId = userId;
+    public CreateUserRequestDto(String eMail, String userName, String password) {
+        logger.info("CreateRequestDto: ctor entered.");
         this.eMail = eMail;
         this.userName = userName;
         this.password = password;
-        this.isDeleted = isDeleted;
     }
 
     public CreateUserRequestDto() {
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public String geteMail() {
+    public String getEMail() {
+        logger.info("CreateUserRequestDto: getEMail entered.");
         return eMail;
     }
 
-    public void seteMail(String eMail) {
+    public void setEMail(String eMail) {
+        logger.info("CreateUserRequestDto: setEMail entered.");
+
         this.eMail = eMail;
     }
 
     public String getUserName() {
+        logger.info("CreateUserRequestDto: getUserName entered.");
+
         return userName;
     }
 
     public void setUserName(String userName) {
+        logger.info("CreateUserRequestDto: setUserName entered.");
         this.userName = userName;
     }
 
     public String getPassword() {
+        logger.info("CreateUserRequestDto: getPassword entered.");
         return password;
     }
 
     public void setPassword(String password) {
+        logger.info("CreateUserRequestDto: setPassword entered.");
         this.password = password;
     }
 
-    public Boolean getDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(Boolean deleted) {
-        isDeleted = deleted;
-    }
 }
