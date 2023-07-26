@@ -1,49 +1,58 @@
 package com.cvqs.usermanagementservice.dto;
 
+import com.cvqs.usermanagementservice.model.Role;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
+/**
+ * DTO class for creating a user request.
+ */
 public class CreateUserRequestDto {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    private String eMail;
+    private String email;
 
-    private String userName;
+    private String username;
 
     private String password;
 
+    private List<Role> roles;
 
-    public CreateUserRequestDto(String eMail, String userName, String password) {
+
+    public CreateUserRequestDto(String email, String username, String password,List<Role> roles) {
         logger.info("CreateRequestDto: ctor entered.");
-        this.eMail = eMail;
-        this.userName = userName;
+        this.email = email;
+        this.username = username;
         this.password = password;
+        this.roles = roles;
     }
 
     public CreateUserRequestDto() {
     }
 
 
-    public String getEMail() {
-        logger.info("CreateUserRequestDto: getEMail entered.");
-        return eMail;
+    public String getEmail() {
+        logger.info("CreateUserRequestDto: getEmail entered.");
+        return email;
     }
 
-    public void setEMail(String eMail) {
-        logger.info("CreateUserRequestDto: setEMail entered.");
+    public void setEmail(String email) {
+        logger.info("CreateUserRequestDto: setEmail entered.");
 
-        this.eMail = eMail;
+        this.email = email;
     }
 
-    public String getUserName() {
+    public String getUsername() {
         logger.info("CreateUserRequestDto: getUserName entered.");
 
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
+    public void setUsername(String username) {
         logger.info("CreateUserRequestDto: setUserName entered.");
-        this.userName = userName;
+        this.username = username;
     }
 
     public String getPassword() {
@@ -56,4 +65,11 @@ public class CreateUserRequestDto {
         this.password = password;
     }
 
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
 }
