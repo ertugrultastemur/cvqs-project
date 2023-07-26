@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  mistake-service:
+    container_name: mistake-service-container
+    build:
+      context: ./mistake-service
+      dockerfile: Dockerfile
+    ports:
+      - "8383:8383"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: '123456'
+      POSTGRES_DB: 'mistake-defect'
+    ports:
+      - "5432:5432"
