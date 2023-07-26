@@ -8,25 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="terminal-service" />
-        <module name="mistake-listing-service" />
-        <module name="eureka-server" />
         <module name="user-management-service" />
         <module name="mistake-service" />
         <module name="security-service" />
+        <module name="mistake-listing-service" />
+        <module name="eureka-server" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="error-listing-service" target="17" />
-      <module name="security" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="error-listing-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="mistake-listing-service" options="-parameters" />
       <module name="mistake-service" options="-parameters" />
-      <module name="security" options="-parameters" />
       <module name="security-service" options="-parameters" />
       <module name="terminal-service" options="-parameters" />
       <module name="user-management-service" options="-parameters" />

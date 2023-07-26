@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cvqs-project.iml" filepath="$PROJECT_DIR$/.idea/cvqs-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mistake-service/mistake-service.iml" filepath="$PROJECT_DIR$/mistake-service/mistake-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-service/security-service.iml" filepath="$PROJECT_DIR$/security-service/security-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-management-service/user-management-service.iml" filepath="$PROJECT_DIR$/user-management-service/user-management-service.iml" />
     </modules>
   </component>
 </project>

@@ -8,12 +8,29 @@ spring:
           uri: lb://user-management-service
           predicates:
             - Path=/v1/user/**
+          filters:
+            - name: AuthenticationFilter
+
+
+        - id: mistake-service
+          uri: lb://mistake-service
+          predicates:
+            - Path=/v1/mistake/**
+          filters:
+            - name: AuthenticationFilter
+
+
+        - id: mistake-listing-service
+          uri: lb://mistake-listing-service
+          predicates:
+               - Path=/v1/mistake-listing/**
+          filters:
+            - name: AuthenticationFilter
 
         - id: security-service
           uri: lb://security-service
           predicates:
-            - Path=/v1/security/**
-
+            - Path=/v1/auth/**
 
 
       discovery:
