@@ -6,19 +6,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-
-
+/**
+ * Service class for configuring and providing a ModelMapper instance.
+ */
 @Service
 public class ModelMapperService {
 
     private final ModelMapper modelMapper;
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    /**
+     * Constructs a ModelMapperService with the specified ModelMapper instance.
+     *
+     * @param modelMapper the ModelMapper instance
+     */
     public ModelMapperService(ModelMapper modelMapper){
         logger.info("ModelMapperService: ctor entered");
         this.modelMapper = modelMapper;
     }
 
+    /**
+     * Returns a ModelMapper instance configured for request mappings.
+     *
+     * @return a ModelMapper instance for request mappings
+     */
     public ModelMapper forRequest() {
         logger.info("ModelMapperService: forRequest method entered");
         this.modelMapper.getConfiguration()
@@ -27,6 +38,11 @@ public class ModelMapperService {
         return this.modelMapper;
     }
 
+    /**
+     * Returns a ModelMapper instance configured for response mappings.
+     *
+     * @return a ModelMapper instance for response mappings
+     */
     public ModelMapper forResponse() {
         logger.info("ModelMapperService: forResponse entered");
         this.modelMapper.getConfiguration()
